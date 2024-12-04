@@ -1,0 +1,10 @@
+filetype on
+syntax on
+set nu
+set cindent
+set tabstop=4
+set softtabstop=4
+set expandtab
+set shiftwidth=4
+set ruler
+set backspace=indent,eol,start

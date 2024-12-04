@@ -1,11 +1,5 @@
 FROM ubuntu:jammy
 
-LABEL version="1.0" maintainer="docker user <tongyuangene@163.com>"
-
-RUN useradd wangtong -d /home/wangtong -m -s /bin/bash
-
-RUN echo "wangtong:ABC123456" | chpasswd
-
 RUN apt update 
 
 RUN apt install -y git vim tree htop lftp tmux

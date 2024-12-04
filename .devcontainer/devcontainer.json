@@ -16,6 +16,6 @@
             ]
         }
     },
-	  "remoteUser": "root",
+    "remoteUser": "root",
     "postCreateCommand": "python -V"
 }

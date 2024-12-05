@@ -1,4 +1,4 @@
-
+本文主要介绍如何应用github codespaces来快速构建一个生物信息分析的环境。可以使用其下载生物软件，下载生物数据，使用docker，apptainer等。最后将数据传回自己的服务器内。
 
 ### 配置devcontainer
 ```
@@ -72,6 +72,12 @@ apt install -y awscli
 apt install -y sra-toolkit
 apt install -y speedtest-cli
 ```
+### 网络测速
+安装完speedtest-cli可以直接用于网络测速
+```
+speedtest
+```
+
 
 ### 安装bioconda
 ```

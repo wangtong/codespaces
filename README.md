@@ -25,7 +25,8 @@
             "version": "latest",
             "enableNonRootDocker": "true",
             "moby": "true"
-        },
+        }
+    },
     "remoteUser": "root",
     "postCreateCommand": "uname -a"
 }

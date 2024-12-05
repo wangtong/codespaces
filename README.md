@@ -103,7 +103,7 @@ mamba install -n genome -y velvet
 mamba install -n genome -y flye
 mamba install -n genome -y miniasm
 mamba install -n genome -y canu
-mamba install -n genome y megahit
+mamba install -n genome -y megahit
 mamba install -n genome -y spades
 
 #安装软件

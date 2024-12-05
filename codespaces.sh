@@ -18,6 +18,12 @@
             ]
         }
     },
+    "features": {
+        "ghcr.io/devcontainers/features/docker-in-docker:2": {
+            "version": "latest",
+            "enableNonRootDocker": "true",
+            "moby": "true"
+        },
     "remoteUser": "root",
     "postCreateCommand": "uname -a"
 

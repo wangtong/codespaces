@@ -1,7 +1,7 @@
 # 配置devcontainer
 
 {
-    "name": "Dev Container Python",
+    "name": "Ubuntu 2204",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
     "customizations": {
         "vscode": {
@@ -114,7 +114,6 @@ apt install -y apptainer
 apptainer pull docker://google/deepvariant
 
 # 打包docker
-apt install -y podman*
 docker pull ubuntu
 docker images
 docker save -o b1d9df8ab815.tar docker.io/ubuntu:latest

@@ -1,5 +1,5 @@
 {
-    "name": "Dev Container Python",
+    "name": "Ubuntu 2204",
     "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
     "customizations": {
         "vscode": {

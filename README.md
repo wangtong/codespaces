@@ -95,6 +95,32 @@ conda config --add channels bioconda
 #安装软件
 mamba install -y flye
 ```
+
+### 打包conda环境
+```
+mamba create -n genome
+mamba install -n genome -y velvet
+mamba install -n genome -y flye
+mamba install -n genome -y miniasm
+mamba install -n genome -y canu
+mamba install -n genome y megahit
+mamba install -n genome -y spades
+
+#安装软件
+mamba install conda-pack
+#打包环境conda pack或者conda-pack都可以
+mamba pack -n genome -o genome.tar.gz
+
+# 解压到新环境
+#首先创建文件夹
+mkidr genome
+tar -zxvf genome.tar.gz -C genome
+
+#激活环境
+mamba activate genome
+source genome/bin/activate
+```
+
 ### apptainer
 ```
 add-apt-repository -y ppa:apptainer/ppa

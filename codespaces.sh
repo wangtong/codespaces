@@ -52,6 +52,7 @@ source ~/.bashrc
 
 
 # apt安装软件
+apt update
 apt install -y tmux 
 apt install -y bwa
 apt install -y samtools

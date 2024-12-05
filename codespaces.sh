@@ -52,10 +52,6 @@ source ~/.bashrc
 
 
 # apt安装软件
-
-apt install -y git 
-apt install -y tree 
-apt install -y htop 
 apt install -y tmux 
 apt install -y bwa
 apt install -y samtools
@@ -67,6 +63,7 @@ apt install -y prodigal
 apt install -y awscli
 apt install -y sra-toolkit
 apt install -y speedtest-cli
+apt install -y software-properties-common
 
 # 网络测速
 speedtest
@@ -83,13 +80,11 @@ sh Miniforge3-Linux-x86_64 -b
 source ~/.bashrc
 #添加软件源
 conda config --add channels bioconda
-
 #安装软件
 mamba install -y flye
 
 
 # 打包conda环境
-
 mamba create -n genome
 mamba install -n genome -y velvet
 mamba install -n genome -y flye
@@ -99,28 +94,18 @@ mamba install -n genome -y megahit
 mamba install -n genome -y spades
 
 #安装软件
-mamba install conda-pack
+mamba install -y conda-pack
 #打包环境conda pack或者conda-pack都可以
-mamba pack -n genome -o genome.tar.gz
+conda pack -n genome -o genome.tar.gz
 
-# 解压到新环境
-#首先创建文件夹
-mkidr genome
-tar -zxvf genome.tar.gz -C genome
-
-#激活环境
-mamba activate genome
-source genome/bin/activate
 
 # apptainer
-
 add-apt-repository -y ppa:apptainer/ppa
 apt update
 apt install -y apptainer
 apptainer pull docker://google/deepvariant
 
 # 打包docker
-
 apt install -y podman*
 docker pull google/deepvariant
 docker images 
@@ -129,11 +114,9 @@ pigz 7d046533d9e9.tar
 
 
 # aws数据下载
-
 aws s3 cp --no-sign-request s3://sra-pub-run-odp/sra/SRR1039510/SRR1039510 SRR1039510.sra
 
 # 下载数据
-
 prefetch SRR8482586 -p
 prefetch SRR8494912 -p
 prefetch SRR8494939 -p

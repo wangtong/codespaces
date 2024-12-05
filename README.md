@@ -57,9 +57,6 @@ source ~/.bashrc
 
 ### apt安装软件
 ```
-apt install -y git 
-apt install -y tree 
-apt install -y htop 
 apt install -y tmux 
 apt install -y bwa
 apt install -y samtools
@@ -71,6 +68,7 @@ apt install -y prodigal
 apt install -y awscli
 apt install -y sra-toolkit
 apt install -y speedtest-cli
+apt install -y software-properties-common
 ```
 ### 网络测速
 安装完speedtest-cli可以直接用于网络测速
@@ -107,18 +105,9 @@ mamba install -n genome -y megahit
 mamba install -n genome -y spades
 
 #安装软件
-mamba install conda-pack
+mamba install -y conda-pack
 #打包环境conda pack或者conda-pack都可以
-mamba pack -n genome -o genome.tar.gz
-
-# 解压到新环境
-#首先创建文件夹
-mkidr genome
-tar -zxvf genome.tar.gz -C genome
-
-#激活环境
-mamba activate genome
-source genome/bin/activate
+conda pack -n genome -o genome.tar.gz
 ```
 
 ### apptainer

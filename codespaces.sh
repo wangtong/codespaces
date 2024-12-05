@@ -107,10 +107,10 @@ apptainer pull docker://google/deepvariant
 
 # 打包docker
 apt install -y podman*
-docker pull google/deepvariant
-docker images 
-docker save -o 7d046533d9e9.tar docker.io/google/deepvariant:latest
-pigz 7d046533d9e9.tar 
+docker pull ubuntu
+docker images
+docker save -o b1d9df8ab815.tar docker.io/ubuntu:latest
+pigz b1d9df8ab815.tar
 
 
 # aws数据下载
